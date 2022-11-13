@@ -68,7 +68,7 @@ const taskAction = new AsyncTask('notify time', async () => {
   lastMinute = nowMinute
   lastHour = nowHour
 
-  await emailSend.send(name, `${nowStr} - ${e}`)
+  await emailSend.send(name, `${nowStr} - ${e.val}${e.unit}`)
 })
 
 const task = new SimpleIntervalJob(taskInterval, taskAction, options)
